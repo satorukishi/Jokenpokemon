@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/tvSelectPokemon"
+              android:text="@string/pokemon_selection" style="@style/Title" android:layout_marginTop="20dp"
+              android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+              android:layout_marginStart="0dp" android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"/>
+    <ImageView android:layout_width="@dimen/largura_pokemon"
+               android:layout_height="@dimen/altura_pokemon"
+               android:src="@drawable/bulbasaur" android:id="@+id/ivBulbasaur"
+               android:layout_marginStart="31dp"
+               android:layout_alignParentStart="true" android:layout_alignParentEnd="true"
+               android:layout_marginEnd="263dp" android:layout_marginTop="36dp"
+               android:layout_below="@+id/tvSelectPokemon"/>
+    <ImageView android:layout_width="@dimen/largura_pokemon"
+               android:layout_height="@dimen/altura_pokemon"
+               android:src="@drawable/squirtle" android:id="@+id/ivSquirtle"
+               android:layout_marginTop="0dp"
+               android:layout_toEndOf="@+id/ivBulbasaur" android:layout_marginStart="-260dp"
+               android:layout_alignParentEnd="true" android:layout_marginEnd="150dp"
+               android:layout_alignTop="@+id/ivBulbasaur"/>
+    <ImageView android:layout_width="@dimen/largura_pokemon"
+               android:layout_height="@dimen/altura_pokemon"
+               android:src="@drawable/charmander" android:id="@+id/ivCharmander"
+               android:layout_marginTop="0dp"
+               android:layout_toEndOf="@+id/ivSquirtle" android:layout_marginStart="-140dp"
+               android:layout_alignParentEnd="true" android:layout_marginEnd="30dp"
+               android:layout_alignTop="@+id/ivSquirtle"/>
+    <ImageView android:layout_width="@dimen/largura_chosen_pokemon"
+               android:layout_height="@dimen/altura_chosen_pokemon"
+               android:id="@+id/ivPokemon"
+               android:layout_marginTop="36dp"
+               android:layout_below="@+id/ivSquirtle"
+               android:layout_marginEnd="-30dp" android:layout_alignEnd="@+id/ivSquirtle"
+               android:layout_marginStart="-30dp" android:layout_alignStart="@+id/ivSquirtle"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/tvScore"
+              android:text="Score: 0" style="@style/Title" android:paddingStart="40dp" android:textAlignment="textStart"
+              android:layout_marginTop="352dp"
+              android:layout_alignParentBottom="true" android:layout_marginBottom="352dp"
+              android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+              android:layout_marginStart="0dp" android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"/>
+
+    <ImageView android:layout_width="@dimen/largura_chosen_pokemon"
+               android:layout_height="@dimen/altura_chosen_pokemon"
+               android:src="@drawable/pokemon_card" android:id="@+id/ivCom"
+               android:layout_marginEnd="0dp" android:layout_alignEnd="@+id/ivPokemon"
+               android:layout_marginStart="0dp" android:layout_alignStart="@+id/ivPokemon"
+               android:layout_above="@+id/tvCom" android:layout_marginBottom="36dp"
+    />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/tvCom"
+              android:text="@string/computer_name" style="@style/Title"
+              android:layout_alignParentStart="true"
+              android:layout_marginStart="0dp"
+              android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"
+              android:layout_alignParentBottom="true"
+              android:layout_marginBottom="48dp"/>
+
+</RelativeLayout>

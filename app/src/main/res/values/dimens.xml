@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="largura_logo_splash">240dp</dimen>
+    <dimen name="altura_logo_splash">100dp</dimen>
+
+    <dimen name="largura_logo_game">210dp</dimen>
+    <dimen name="altura_logo_game">170dp</dimen>
+
+    <dimen name="largura_grass_water_fire">105dp</dimen>
+    <dimen name="altura_grass_water_fire">105dp</dimen>
+
+    <dimen name="largura_pokemon">80dp</dimen>
+    <dimen name="altura_pokemon">80dp</dimen>
+
+    <dimen name="largura_chosen_pokemon">130dp</dimen>
+    <dimen name="altura_chosen_pokemon">130dp</dimen>
+
+    <dimen name="margin_top_fields">20dp</dimen>
+</resources>

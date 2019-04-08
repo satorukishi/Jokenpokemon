@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">JoKenPokemon</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="nickname">Nickname</string>
+    <string name="gender">Gender</string>
+    <string name="password">Password</string>
+    <string name="logar">Sign in</string>
+    <string name="new_account">Sign up</string>
+    <string name="manter_autenticado">Remember me in this mobile</string>
+    <string name="create_account">Create an account</string>
+
+    <string name="email_empty_phrase">Email can´t be blank</string>
+    <string name="username_empty_phrase">Username can´t be blank</string>
+    <string name="nickname_empty_phrase">Nickname can´t be blank</string>
+    <string name="gender_empty_phrase">Gender can´t be blank</string>
+    <string name="password_empty_phrase">Password can´t be blank</string>
+    <string name="new_account_title">Let\'s create a new account</string>
+
+    <string name="select_gender">Select your gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="user_not_found">Email or Password is incorrect</string>
+    <string name="play">Play</string>
+    <string name="ranking">Ranking</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="developed_by">Everton Satoru Hiraga Kishi - RM43057</string>
+    <string name="version">1.0.0.0</string>
+    <string name="pokemon_selection">Which Pokémon will you choose?</string>
+    <string name="computer_name">Computer Name</string>
+    <string name="game_over">Game Over</string>
+    <string name="play_again">Play Again</string>
+    <string name="main_menu">Main Menu</string>
+    <string-array name="genders_array">
+        <item>@string/select_gender</item>
+        <item>@string/male</item>
+        <item>@string/female</item>
+    </string-array>
+</resources>

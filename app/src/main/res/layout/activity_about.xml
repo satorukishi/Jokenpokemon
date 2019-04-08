@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <ImageView android:id="@+id/ivLogoGame"
+               android:layout_width="@dimen/largura_logo_game"
+               android:layout_height="@dimen/altura_logo_game"
+               android:src="@drawable/logo_game"
+               android:layout_marginTop="60dp" android:layout_alignParentTop="true"
+               android:layout_marginEnd="105dp" android:layout_alignParentEnd="true"
+               android:layout_marginStart="95dp" android:layout_alignParentStart="true"/>
+
+    <ImageView android:layout_width="@dimen/largura_grass_water_fire"
+               android:layout_height="@dimen/altura_grass_water_fire"
+               android:src="@drawable/grass_water_fire"
+               android:layout_marginStart="120dp" android:layout_alignStart="@+id/ivLogoGame"
+               android:layout_alignTop="@+id/ivLogoGame" android:layout_marginTop="126dp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:text="@string/developed_by"
+              android:id="@+id/tvDeveloper"
+              style="@style/Title" android:layout_marginTop="95dp"
+              android:layout_alignParentStart="true" android:layout_marginStart="0dp"
+              android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"
+              android:layout_below="@+id/ivLogoGame"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:text="@string/version"
+              style="@style/Title" android:layout_marginTop="20dp"
+              android:layout_alignParentStart="true" android:layout_marginStart="0dp"
+              android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"
+              android:layout_below="@+id/tvDeveloper"/>
+</RelativeLayout>

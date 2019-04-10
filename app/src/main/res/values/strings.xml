@@ -17,6 +17,12 @@
     <string name="password_empty_phrase">Password can´t be blank</string>
     <string name="new_account_title">Let\'s create a new account</string>
 
+    <!--Game-->
+    <string name="score">Score:</string>
+    <string name="pokemon_fainted">fainted!</string>
+    <string name="not_very_effective">It´s not very effective!</string>
+    <string name="very_effective">It´s super effective!</string>
+
     <string name="select_gender">Select your gender</string>
     <string name="male">Male</string>
     <string name="female">Female</string>

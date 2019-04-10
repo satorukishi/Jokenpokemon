@@ -38,17 +38,17 @@
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
               android:id="@+id/tvScore"
               android:text="Score: 0" style="@style/Title" android:paddingStart="40dp" android:textAlignment="textStart"
-              android:layout_marginTop="352dp"
-              android:layout_alignParentBottom="true" android:layout_marginBottom="352dp"
-              android:layout_alignParentTop="true" android:layout_alignParentStart="true"
-              android:layout_marginStart="0dp" android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"/>
+              android:layout_alignParentStart="true"
+              android:layout_marginStart="0dp" android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"
+              android:layout_marginTop="352dp" android:layout_alignParentTop="true"
+    />
 
     <ImageView android:layout_width="@dimen/largura_chosen_pokemon"
                android:layout_height="@dimen/altura_chosen_pokemon"
                android:src="@drawable/pokemon_card" android:id="@+id/ivCom"
                android:layout_marginEnd="0dp" android:layout_alignEnd="@+id/ivPokemon"
                android:layout_marginStart="0dp" android:layout_alignStart="@+id/ivPokemon"
-               android:layout_above="@+id/tvCom" android:layout_marginBottom="36dp"
+               android:layout_above="@+id/tvCom" android:layout_marginBottom="30dp"
     />
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
               android:id="@+id/tvCom"

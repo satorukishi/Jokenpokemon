@@ -3,15 +3,14 @@ package com.satoruchannel.jokenpokemon.entity
 import com.satoruchannel.jokenpokemon.enum.PokemonType
 
 class Computer() {
-    constructor(nome: String, tipoPokemon: PokemonType) : this()
-
     var nome: String = ""
     var tipoPokemon: PokemonType = PokemonType.GRASS
 
-    init {
+    constructor(nome: String, tipoPokemon: PokemonType) : this() {
         this.nome = nome
         this.tipoPokemon = tipoPokemon
     }
+
 
     fun getAllEnemies(): List<Computer> {
         val computers = mutableListOf<Computer>()

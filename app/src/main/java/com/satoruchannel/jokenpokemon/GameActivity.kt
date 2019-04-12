@@ -1,11 +1,18 @@
 package com.satoruchannel.jokenpokemon
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import com.satoruchannel.jokenpokemon.entity.Computer
 import com.satoruchannel.jokenpokemon.enum.PokemonType
 import kotlinx.android.synthetic.main.activity_game.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 class GameActivity : JokenpoAppCompatActivity() {
@@ -14,10 +21,14 @@ class GameActivity : JokenpoAppCompatActivity() {
     private lateinit var computers: List<Computer>
     private var pontuacao: Int = 0
     private var fezJogada = false
+    private val DELAY_TOAST = 3000L
+    private var email = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
+
+        email = intent.getStringExtra(EXTRA_EMAIL)
 
         computers = com.getAllEnemies()
 
@@ -39,6 +50,11 @@ class GameActivity : JokenpoAppCompatActivity() {
     }
 
     private fun iniciarJogada() {
+        reiniciarJogada()
+        atualizarPontuacao(0)
+    }
+
+    private fun reiniciarJogada() {
         fezJogada = false
 
         // Computador
@@ -47,7 +63,11 @@ class GameActivity : JokenpoAppCompatActivity() {
         com = computers[iInimigo]
         tvCom.text = com.nome
 
-        atualizarPontuacao(0)
+        // Player
+        ivCharmander.setImageResource(R.drawable.charmander)
+        ivSquirtle.setImageResource(R.drawable.squirtle)
+        ivBulbasaur.setImageResource(R.drawable.bulbasaur)
+        ivPokemon.visibility = View.INVISIBLE
     }
 
     private fun atualizarPontuacao(novaPontuacao: Int) {
@@ -70,7 +90,9 @@ class GameActivity : JokenpoAppCompatActivity() {
                 PokemonType.FIRE -> ivCom.setImageResource(R.drawable.charmander)
             }
 
+
             ivPokemonEscolhido.setImageResource(R.drawable.grass_water_fire)
+            ivPokemon.visibility = View.VISIBLE
             when (tipoEscolhido) {
                 PokemonType.GRASS -> {
                     ivPokemon.setImageResource(R.drawable.bulbasaur)
@@ -108,17 +130,41 @@ class GameActivity : JokenpoAppCompatActivity() {
     }
 
     private fun pokemonVeryEffective() {
-        Toast.makeText(this, R.string.very_effective, Toast.LENGTH_SHORT).show()
-        atualizarPontuacao(2)
+        val obj = this
+
+        Toast.makeText(obj, R.string.very_effective, Toast.LENGTH_SHORT).show()
+
+        GlobalScope.launch(context = Dispatchers.Main) {
+            delay(DELAY_TOAST)
+            atualizarPontuacao(2)
+            reiniciarJogada()
+        }
     }
 
     private fun pokemonNotVeryEffective() {
-        Toast.makeText(this, R.string.not_very_effective, Toast.LENGTH_SHORT).show()
-        atualizarPontuacao(1)
+        val obj = this
+
+        Toast.makeText(obj, R.string.not_very_effective, Toast.LENGTH_SHORT).show()
+
+        GlobalScope.launch(context = Dispatchers.Main) {
+            delay(DELAY_TOAST)
+            atualizarPontuacao(1)
+            reiniciarJogada()
+        }
 
     }
 
     private fun pokemonFainted(nome: String) {
-        Toast.makeText(this, nome + " " + getString(R.string.pokemon_fainted), Toast.LENGTH_SHORT).show()
+        val obj = this
+
+        Toast.makeText(obj, nome + " " + getString(R.string.pokemon_fainted), Toast.LENGTH_SHORT).show()
+
+        Handler().postDelayed(Runnable {
+            intent = Intent(obj, GameOverActivity::class.java)
+            intent.putExtra(EXTRA_EMAIL, email)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            startActivity(intent)
+            this.finish()
+        }, DELAY_TOAST)
     }
 }

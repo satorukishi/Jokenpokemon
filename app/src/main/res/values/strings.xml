@@ -20,7 +20,7 @@
     <!--Game-->
     <string name="score">Score:</string>
     <string name="pokemon_fainted">fainted!</string>
-    <string name="not_very_effective">It´s not very effective!</string>
+    <string name="not_very_effective">It´s not very effective...</string>
     <string name="very_effective">It´s super effective!</string>
 
     <string name="select_gender">Select your gender</string>
@@ -38,6 +38,7 @@
     <string name="game_over">Game Over</string>
     <string name="play_again">Play Again</string>
     <string name="main_menu">Main Menu</string>
+    <string name="trainer_name">Trainer name:</string>
     <string-array name="genders_array">
         <item>@string/select_gender</item>
         <item>@string/male</item>

@@ -16,6 +16,7 @@ class MainActivity : JokenpoAppCompatActivity() {
 
         btPlay.setOnClickListener {
             val intent = Intent(this, GameActivity::class.java)
+            intent.putExtra(EXTRA_EMAIL, email)
             startActivity(intent)
         }
         btRanking.setOnClickListener {

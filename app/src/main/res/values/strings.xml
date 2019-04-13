@@ -39,6 +39,7 @@
     <string name="play_again">Play Again</string>
     <string name="main_menu">Main Menu</string>
     <string name="trainer_name">Trainer name:</string>
+    <string name="loading">Now loading please wait</string>
     <string-array name="genders_array">
         <item>@string/select_gender</item>
         <item>@string/male</item>

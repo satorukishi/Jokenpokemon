@@ -2,6 +2,7 @@ package com.satoruchannel.jokenpokemon
 
 import android.content.Intent
 import android.os.Bundle
+import com.satoruchannel.jokenpokemon.ui.RankingActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : JokenpoAppCompatActivity() {

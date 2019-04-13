@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.satoruchannel.jokenpokemon">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -41,7 +43,7 @@
         <activity android:name=".MainActivity" android:theme="@style/FullScreen"/>
         <activity android:name=".GameActivity" android:theme="@style/FullScreen"/>
         <activity android:name=".GameOverActivity" android:theme="@style/FullScreen"/>
-        <activity android:name=".RankingActivity" android:theme="@style/FullScreen"/>
+        <activity android:name=".ui.RankingActivity" android:theme="@style/FullScreen"/>
         <activity android:name=".AboutActivity" android:theme="@style/FullScreen"/>
 
     </application>

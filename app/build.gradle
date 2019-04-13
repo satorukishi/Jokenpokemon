@@ -42,4 +42,11 @@ dependencies {
     //Dependencia para adicionar o FAB (Menu com botoes)
     implementation 'com.github.clans:fab:1.6.4'
 
+    // para fazer o acesso ao web service
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    // ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.0"
 }

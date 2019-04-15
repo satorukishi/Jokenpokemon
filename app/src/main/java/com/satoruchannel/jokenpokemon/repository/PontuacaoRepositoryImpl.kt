@@ -27,12 +27,12 @@ class PontuacaoRepositoryImpl : PontuacaoRepository {
         // MutableLiveData<PontuacaoResponse>() observa o PontuacaoResponse
         val liveData = MutableLiveData<PontuacaoResponse>()
         pontuacaoAPI.pesquisar()
-            .enqueue(object : Callback<Pontuacao> {
-                override fun onResponse(call: Call<Pontuacao>?, response: Response<Pontuacao>?) {
+            .enqueue(object : Callback<Array<Pontuacao>> {
+                override fun onResponse(call: Call<Array<Pontuacao>>?, response: Response<Array<Pontuacao>>?) {
                     liveData.value = PontuacaoResponse(response?.body())
                 }
 
-                override fun onFailure(call: Call<Pontuacao>?, t: Throwable?) {
+                override fun onFailure(call: Call<Array<Pontuacao>>?, t: Throwable?) {
                     liveData.value = PontuacaoResponse(t!!)
                 }
             })
@@ -46,7 +46,7 @@ class PontuacaoRepositoryImpl : PontuacaoRepository {
         pontuacaoAPI.inserir()
             .enqueue(object : Callback<Pontuacao> {
                 override fun onResponse(call: Call<Pontuacao>?, response: Response<Pontuacao>?) {
-                    liveData.value = PontuacaoResponse(response?.body())
+                    liveData.value = PontuacaoResponse()
                 }
 
                 override fun onFailure(call: Call<Pontuacao>?, t: Throwable?) {

@@ -24,7 +24,7 @@ class RankingViewModel : ViewModel() {
         isLoading.postValue(true)
 
         mApiResponse.addSource(enderecoRepository.buscarRanking()) { api ->
-            {
+            run {
                 mApiResponse.value = api
                 isLoading.postValue(false)
             }

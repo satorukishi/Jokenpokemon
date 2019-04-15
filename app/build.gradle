@@ -39,8 +39,6 @@ dependencies {
     implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
     //Dependencia para conseguirmos ter acesso ao banco de dados via browser
     implementation 'com.facebook.stetho:stetho:1.5.0'
-    //Dependencia para adicionar o FAB (Menu com botoes)
-    implementation 'com.github.clans:fab:1.6.4'
 
     // para fazer o acesso ao web service
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
@@ -49,4 +47,9 @@ dependencies {
     // ViewModel and LiveData
     implementation "android.arch.lifecycle:extensions:1.1.0"
     annotationProcessor "android.arch.lifecycle:compiler:1.1.0"
+
+    // RecyclerView
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.5.2'
+
 }

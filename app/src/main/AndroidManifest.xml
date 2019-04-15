@@ -11,7 +11,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
-            android:name=".App">
+            android:name=".App"
+            android:networkSecurityConfig="@xml/network_security_config">
         <provider
                 android:name="com.activeandroid.content.ContentProvider"
                 android:authorities="com.satoruchannel.jokenpokemon"

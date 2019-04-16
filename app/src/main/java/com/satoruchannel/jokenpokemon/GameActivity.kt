@@ -45,7 +45,6 @@ class GameActivity : JokenpoAppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-
         iniciarJogada()
     }
 

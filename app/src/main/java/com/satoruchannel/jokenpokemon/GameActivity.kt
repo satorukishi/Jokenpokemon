@@ -136,7 +136,7 @@ class GameActivity : JokenpoAppCompatActivity() {
 
         GlobalScope.launch(context = Dispatchers.Main) {
             delay(DELAY_TOAST)
-            atualizarPontuacao(2)
+            atualizarPontuacao(2000)
             reiniciarJogada()
         }
     }
@@ -148,7 +148,7 @@ class GameActivity : JokenpoAppCompatActivity() {
 
         GlobalScope.launch(context = Dispatchers.Main) {
             delay(DELAY_TOAST)
-            atualizarPontuacao(1)
+            atualizarPontuacao(1000)
             reiniciarJogada()
         }
 
@@ -162,6 +162,7 @@ class GameActivity : JokenpoAppCompatActivity() {
         Handler().postDelayed(Runnable {
             intent = Intent(obj, GameOverActivity::class.java)
             intent.putExtra(EXTRA_EMAIL, email)
+            intent.putExtra(EXTRA_SCORE, pontuacao)
             intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
             this.finish()

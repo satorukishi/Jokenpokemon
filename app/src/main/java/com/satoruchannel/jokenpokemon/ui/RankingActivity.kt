@@ -146,7 +146,7 @@ class RankingActivity : JokenpoAppCompatActivity() {
                     val p = Pontuacao(
                         "",
                         jsonData.getString(PontuacaoResponse.TAG_NOME),
-                        jsonData.getString(PontuacaoResponse.TAG_PONTOS)
+                        jsonData.getInt(PontuacaoResponse.TAG_PONTOS)
                     )
 
                     data.add(p);

@@ -8,6 +8,7 @@ abstract class JokenpoAppCompatActivity : AppCompatActivity() {
 
     // SharedPreferences
     protected val EXTRA_EMAIL = "EXTRA_EMAIL"
+    protected val EXTRA_SCORE = "EXTRA_SCORE"
     protected val SP_NAME = "JOKENPOKEMON"
 
 }

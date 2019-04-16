@@ -43,9 +43,10 @@ class PontuacaoRepositoryImpl : PontuacaoRepository {
     override fun inserirPontuacao(pontuacao: Pontuacao): LiveData<PontuacaoResponse> {
         // MutableLiveData<PontuacaoResponse>() observa o PontuacaoResponse
         val liveData = MutableLiveData<PontuacaoResponse>()
-        pontuacaoAPI.inserir()
+
+        pontuacaoAPI.inserir(pontuacao)
             .enqueue(object : Callback<Pontuacao> {
-                override fun onResponse(call: Call<Pontuacao>?, response: Response<Pontuacao>?) {
+                override fun onResponse(call: Call<Pontuacao>, response: Response<Pontuacao>) {
                     liveData.value = PontuacaoResponse()
                 }
 

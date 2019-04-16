@@ -6,7 +6,7 @@
                 android:padding="10dp">
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:id="@+id/tvTrainerName"
+              android:id="@+id/tvItemTrainerName"
               android:textStyle="bold"
               android:layout_marginLeft="5dp"
               android:textAppearance="?android:attr/textAppearanceMedium"
@@ -14,11 +14,11 @@
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:id="@+id/tvPontuacao"
+              android:id="@+id/tvItemPontuacao"
               android:layout_marginLeft="5dp"
               android:textAppearance="?android:attr/textAppearanceSmall"
               android:text="@string/score"
-              android:layout_marginTop="0dp" android:layout_below="@+id/tvTrainerName"
+              android:layout_marginTop="0dp" android:layout_below="@+id/tvItemTrainerName"
               android:textColor="#666"/>
 
 </RelativeLayout>

@@ -39,7 +39,7 @@ class PontuacaoAdapter(private var context: Context, private var data: List<Pont
         if (holder is AndroidItemHolder) {
             myHolder = holder
             myHolder.tvTrainerName?.text = current.nome
-            myHolder.tvPontuacao?.text = current.pontos
+            myHolder.tvPontuacao?.text = current.pontos.toString()
         }
 
     }
@@ -56,13 +56,13 @@ class PontuacaoAdapter(private var context: Context, private var data: List<Pont
         constructor(itemView: View) : super(itemView) {
             itemView.setOnClickListener(this)
 
-            tvTrainerName = itemView.findViewById(R.id.tvTrainerName)
-            tvPontuacao = itemView.findViewById(R.id.tvPontuacao)
+            tvTrainerName = itemView.findViewById(R.id.tvItemTrainerName)
+            tvPontuacao = itemView.findViewById(R.id.tvItemPontuacao)
         }
 
         override fun onClick(view: View?) {
-            if (clickListener != null)
-                clickListener.onClick(view!!, adapterPosition)
+//            if (clickListener != null)
+//                clickListener.onClick(view!!, adapterPosition)
         }
 
     }
